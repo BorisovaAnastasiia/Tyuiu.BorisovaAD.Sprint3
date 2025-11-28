@@ -10,8 +10,7 @@ namespace Tyuiu.BorisovaAD.Sprint3.Task4.V4.Test
             DataService ds = new DataService();
             int startValue = -5;
             int stopValue = 5;
-            // Ожидаемый результат: сумма для x = -5, -4, -3, -2, -1
-            // Расчетное значение: -0.6669931885848772
+            // Ожидаемое значение для сравнения (с точностью до 3 знаков после запятой, как в требовании к выводу)
             double expected = -0.6669931885848772;
 
             double actual = ds.Calculate(startValue, stopValue);

@@ -33,7 +33,7 @@ internal class Program
 
         double result = ds.Calculate(startValue, stopValue);
         // Результат будет суммой значений для x = -5, -4, -3, -2, -1.
-        Console.WriteLine($"Сумма значений функции на отрезке до x=0: {result}");
+        Console.WriteLine($"Сумма значений функции на отрезке до x=0: {result:F3}");
 
         Console.ReadKey();
     }

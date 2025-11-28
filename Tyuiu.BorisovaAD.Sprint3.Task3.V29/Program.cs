@@ -1,37 +1,37 @@
-﻿using Tyuiu.BorisovaAD.Sprint3.Task2.V28.Lib;
+﻿using Tyuiu.BorisovaAD.Sprint3.Task3.V29.Lib;
 internal class Program
 {
     private static void Main(string[] args)
     {
         DataService ds = new DataService();
 
-        Console.Title = "Спринт #3 | Задание #2 | Вариант #28 | Борисова А. Д.";
+        Console.Title = "Спринт #3 | Задание #3 | Вариант #29 | Борисова А. Д.";
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* Спринт #3                                                               *");
-        Console.WriteLine("* Тема: Цикл do-while                                                     *");
-        Console.WriteLine("* Задание #2                                                              *");
-        Console.WriteLine("* Вариант #28                                                             *");
+        Console.WriteLine("* Тема: Использование оператора foreach в строках                         *");
+        Console.WriteLine("* Задание #3                                                              *");
+        Console.WriteLine("* Вариант #29                                                             *");
         Console.WriteLine("* Выполнил: Борисова Анастасия Дмитриевна | Смартб-23-1                     *");
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* УСЛОВИЕ:                                                                *");
-        Console.WriteLine("* Написать программу используя цикл do...while, которая вычисляет           *");
-        Console.WriteLine("* произведение ряда по формуле: P = [Произведение от k=1 до 9] * cos(1.8) *");
+        Console.WriteLine("* Используя цикл foreach удалить из строки все буквы h в строке:          *");
+        Console.WriteLine("* \"chgr vhhtg hnht\"                                                      *");
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
         Console.WriteLine("***************************************************************************");
 
-        int startValue = 1;
-        int stopValue = 9;
+        string initialString = "chgr vhhtg hnht";
+        char charToDelete = 'h';
 
-        Console.WriteLine($"Начальное значение ряда: {startValue}");
-        Console.WriteLine($"Конечное значение ряда: {stopValue}");
+        Console.WriteLine($"Исходная строка: {initialString}");
+        Console.WriteLine($"Удаляемый символ: {charToDelete}");
 
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
         Console.WriteLine("***************************************************************************");
 
-        double result = ds.GetMultiplySeries(startValue, stopValue);
-        Console.WriteLine($"Произведение ряда P = {result}");
+        string result = ds.DeleteCharInString(initialString, charToDelete);
+        Console.WriteLine($"Строка после удаления символа '{charToDelete}': {result}");
 
         Console.ReadKey();
     }

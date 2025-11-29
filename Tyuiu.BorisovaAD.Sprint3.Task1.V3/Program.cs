@@ -31,7 +31,7 @@ internal class Program
         Console.WriteLine("***************************************************************************");
 
         double result = ds.GetMultiplySeries(startValue, stopValue);
-        Console.WriteLine($"Произведение ряда P = {result}");
+        Console.WriteLine($"Произведение ряда P = {result:F3}");
 
         Console.ReadKey();
     }

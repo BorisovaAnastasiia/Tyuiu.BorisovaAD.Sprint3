@@ -8,23 +8,16 @@ namespace Tyuiu.BorisovaAD.Sprint3.Task0.V25.Test
         public void ValidGetSumSeries()
         {
             DataService ds = new DataService();
-
-            // Параметры для вычислений:
-            int value = 0; // не используется в формуле
+            int x = 5;
             int startValue = 1;
             int stopValue = 14;
+            // Ожидаемое значение, рассчитанное заранее: ~0.835472855...
+            double expected = 0.835472855146522;
 
-            // Вызов метода
-            double result = ds.GetSumSeries(value, startValue, stopValue);
+            double actual = ds.GetSumSeries(startValue, stopValue, x);
 
-            // Ожидаемое значение можно заранее вычислить или использовать приблизительное значение
-            // Для проверки можно взять примерное значение вручную посчитаной суммы ряда
-            // Пример (вариант проверки): приблизительно 3.41 (зависит от точности вычисления)
-
-            double expected = 3.41;
-            double delta = 0.01; // допустимая погрешность
-
-            Assert.AreEqual(expected, result, delta, "Сумма ряда вычислена неверно");
+            // Используем Assert.AreEqual с погрешностью (например, 0.0001) для сравнения вещественных чисел
+            Assert.AreEqual(expected, actual, 0.0001);
         }
     }
 }

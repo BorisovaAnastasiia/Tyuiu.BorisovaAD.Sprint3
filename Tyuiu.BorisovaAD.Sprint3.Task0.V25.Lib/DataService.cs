@@ -5,16 +5,16 @@ namespace Tyuiu.BorisovaAD.Sprint3.Task0.V25.Lib
     {
         public double GetSumSeries(int value, int startValue, int stopValue)
         {
-            double sum = 0;
-            int x = 5; // по условию x=5
-            double baseValue = (double)4 / (1 + x); // выражение под степенью
-
+            double sumSeries = 0;
+            // Цикл for проходит по всем значениям i в заданном диапазоне
             for (int i = startValue; i <= stopValue; i++)
             {
-                sum += Math.Pow(baseValue, i);
+                // Вычисляем значение члена ряда: (4 / (1 + x^i))^i
+                double term = Math.Pow((double)4 / (1 + Math.Pow(x, i)), i);
+                sumSeries += term;
             }
 
-            return sum;
+            return sumSeries;
         }
     }
 }

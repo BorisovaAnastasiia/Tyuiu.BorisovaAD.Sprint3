@@ -11,7 +11,7 @@ internal class Program
         Console.WriteLine("* Тема: Оператор цикла for                                                *");
         Console.WriteLine("* Задание #1                                                              *");
         Console.WriteLine("* Вариант #25                                                             *");
-        Console.WriteLine("* Выполнил: Борисова Анастасия Дмитриевна | СМАРТб-25-1                     *");
+        Console.WriteLine("* Выполнил: Борисова Анастасия Дмитриевна | СМАРТб-25-1                   *");
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* УСЛОВИЕ:                                                                *");
         Console.WriteLine("* Написать программу, которая вычисляет сумму ряда по формуле:            *");
